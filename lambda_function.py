@@ -2,6 +2,7 @@ import random
 import pandas as pd
 
 def generate_and_store_transactions_data_to_s3(event, context):
+    print(">>>>>>>",event)
     df = pd.DataFrame(columns=['transaction_id', 'customer_id', 'product_id', 'quantity', 'price', 
                                'transaction_date', 'payment_type'])    
     for i in range(50):
